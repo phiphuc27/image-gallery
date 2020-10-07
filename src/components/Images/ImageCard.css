@@ -1,0 +1,75 @@
+.image {
+  position: relative;
+  cursor: zoom-in;
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+}
+
+.image + .image {
+  margin-top: 1.5em;
+}
+
+.image__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 80px;
+  background: linear-gradient(to top, #000000 0%, transparent 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0 1em;
+
+  transition: opacity 200ms;
+  opacity: 0;
+  cursor: default;
+}
+
+.image:hover .image__info {
+  opacity: 1;
+  transition-duration: 100ms;
+}
+
+.image__user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.image__user > img {
+  border-radius: 50%;
+}
+
+.image__user > span {
+  margin-left: 0.5em;
+  text-transform: capitalize;
+}
+
+.liked {
+  color: white !important;
+  background-color: #fb2c1f !important;
+}
+
+.liked:hover {
+  background-color: #de1104 !important;
+}
+
+@media screen and (max-width: 950px) {
+  .image__info {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .image + .image {
+    margin-top: 1em;
+  }
+}

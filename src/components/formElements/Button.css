@@ -1,0 +1,25 @@
+.btn {
+  color: #767676;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  outline: none;
+
+  height: 32px;
+  padding: 0 10px;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn:hover {
+  color: black;
+  background-color: white;
+}
